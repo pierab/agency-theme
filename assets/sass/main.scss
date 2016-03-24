@@ -1,0 +1,167 @@
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_resets.scss";
+header {
+	background: url("../../img/header-bg.jpg")center;
+	height:90vh;
+	background-size: cover;
+	.navbar {
+	 	.navbar-header{
+	 		.navbar-brand {
+	 			font-size: 24px;
+				color: $yellow;
+	 			font-family:$font-logo;
+	 		}
+		}
+		ul>li>a{
+			text-decoration: none;
+			color: white;
+			font-family: $font-title;
+		}
+	}	
+	.tittle_area{
+		h3{
+			font-family: $font-description;
+			font-style: italic;
+			margin-top: 16%;
+			color: white;
+	 	}
+	 	h1{
+	 		color: white;
+	 		font-family: $font-title;
+	 		font-size: 5em;
+	 		font-weight: bold;
+	 		margin-top: 2%;
+	 	}
+	 	button{
+	 		@include boton ($yellow, 10px 20px, $font-title, white, 5px, none);
+	 		margin-top: 3%;
+	 	}
+	}
+}
+.services{
+	padding: 10%;
+	span{
+		font-family: $font-description;
+		font-style: italic;
+		color: $dark-gray;
+	}
+	.row{
+		i {
+			margin-top: 10%;
+			color: white;
+			font-size:60px;
+			background-color:$yellow;
+			position: relative;
+   			display: inline-block;
+    		vertical-align: middle;
+    		border-radius: 50%;
+		}
+	}
+}
+.portfolio{
+	padding: 10% 0;
+	background-color: $gray;
+	p{
+		font-family: $font-description;
+		font-style: italic;	
+		margin-bottom: 2%;
+	}
+	.container{
+		.row{
+			img{
+				width: 100%;
+			}
+			.text-box{
+				background-color: white;
+				margin-top: -8px;
+			}
+		}		
+	}
+
+}
+
+.team {
+	background-color: $gray;
+	padding:7%;
+	.col-md-4 {
+	    .img-moment {
+	        img {
+	            width: 65%;
+	            border-radius: 50%;
+	            border: 5px white solid;
+	        }
+	}
+    .description-team{
+        padding:2% 10%;
+    }
+}
+.about{
+	
+	p{
+		font-family: $font-description;
+		font-style: italic;	
+		margin-bottom: 2%
+	}
+	.container{
+		img {
+            width: 100%;
+            border-radius: 50%;
+            padding: 5%;
+            background-color:$gray;
+            margin-bottom: 15%;
+        }
+        &::before {
+    		content: "";
+    		border: 2px solid $gray;
+    		position: absolute;
+    		left: 50%;  
+    		height: 600px;		
+		}    
+    
+    }        		
+
+}
+
+.form{
+    background-color:#000000;
+    color:white;
+    padding: 10% 0;
+    input{
+    	font-family: $font-title;
+    	padding:2%;
+    }
+
+    button{
+	 	@include boton ($yellow, 10px 20px, $font-title, white, 5px, none);
+	 		margin-top: 3%;
+	} 		
+	textarea{
+		height: 200px!important;
+		font-family: "Montserrat";
+	}
+}
+footer{
+    font-family: "Montserrat";
+    .container {
+	    p{
+	    	margin-top: 1%;
+	    }
+	    a{
+	        color: $yellow;
+	        margin-right: 6%;
+	    }
+	    .social{
+		    a {
+				color: white;
+				font-size: 1em;
+				padding: 2% 2%;
+				background-color: black;
+				position: relative;
+		   		display: inline-block;
+		    	vertical-align: middle;
+		    	border-radius: 50%;
+			}
+		}
+	}
+}
