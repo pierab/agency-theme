@@ -1,0 +1,9 @@
+@mixin boton ($yellow, $padding-size, $font-title, $color, $radius, $none){
+	background-color: $yellow;
+	padding:$padding-size;
+	font-family:$font-title;
+	color:$color;
+	border-radius:$radius;
+	border:$none;
+}
+

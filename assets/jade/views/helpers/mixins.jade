@@ -1,0 +1,62 @@
+mixin icon(call)
+    case call
+        when 'first'
+            i.fa.fa-shopping-cart.fa-stack
+        when 'second'
+            i.fa.fa-laptop.fa-stack
+        when 'third'
+            i.fa.fa-lock.fa-stack
+              
+mixin list-service(call, servicetittle)
+    .col-md-4
+        +icon(call)
+        h3= servicetittle
+        p= parrafo
+mixin img-member(imgmember)
+    case imgmember
+        when 'member1'
+            img(src="img/team/1.jpg")
+        when 'member2'
+            img(src="img/team/2.jpg")
+        when 'member3'
+            img(src="img/team/3.jpg")
+mixin teammember(imgmember, membertittle)
+    .col-md-4
+        .img-moment
+            +img-member(imgmember)
+        h3= membertittle
+        
+        .social
+            a
+                i.fa.fa-twitter
+            a
+                i.fa.fa-facebook
+            a
+                i.fa.fa-linkedin
+
+mixin client(client)
+    case client
+        when 'client1'
+            img(src="img/logos/aetuts.jpg")
+        when 'client2'
+            img(src="img/logos/envato.jpg")
+        when 'client3'
+            img(src="img/logos/themeforest.jpg")
+        when 'client4'
+            img(src="img/logos/wordpress.jpg")
+mixin input(place)
+    .form-group
+        input.form-control(
+            placeholder= place
+        )
+mixin input(pholder)
+    .form-group
+        input.input-lg.form-control(
+            placeholder= pholder
+        )
+mixin textarea(message)
+    .form-group
+        textarea.form-control(
+            placeholder= message
+        )
+

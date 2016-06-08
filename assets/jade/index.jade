@@ -1,0 +1,66 @@
+include views/helpers/variable
+include views/helpers/mixins
+doctype html
+html(lang="es")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		title Agency Theme
+		link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Montserrat', type='text/css')
+		link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Kaushan+Script', type='text/css')
+		link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300', type='text/css')
+		link(rel="stylesheet", href='https://fonts.googleapis.com/css?family=Droid+Serif:700italic,400italic,400,700', type='text/css')
+		link(href="assets/css/bootstrap.min.css" rel="stylesheet")
+		link(rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css")
+		link(href="assets/css/main.css" rel="stylesheet")
+
+	body
+		include views/header
+		include views/services
+		include views/portfolio
+		include views/about
+		include views/team
+	
+		section.team.text-center
+			h2 OUR AMAZING TEAM
+			p Lorem ipsum dolor sit amet.
+			.container
+				.row
+					+teammember("member1", "Kay Garland")
+					+teammember("member2", "Kay Garland")
+					+teammember("member3", "Kay Garland")
+				.description-team.text-center
+					p  Ab esse, dolorem laborum error facilis provident unde impedit quia magnam, maxime molestias quod, alias natus.
+
+		section.clients.text-center
+			+client("client1")
+			+client("client2")
+			+client("client3")
+			+client("client4")
+		section.form.text-center
+			h2 CONTACT US
+			p Lorem ipsum dolor sit amet.
+			.container
+				.row
+					.col-md-6
+						form
+							+input("Your name*")
+							+input("Your mail*")
+							+input("Your phone*")
+					.col-md-6
+						form
+							+textarea("Your message*")
+				button.btn.text-center Send Message	
+		footer.text-center.margin-t-b
+			.container
+				.row
+					.col-md-4.margin-t-b
+						p Copyright Your Website 2014
+					.col-md-4
+						.social
+							a.redes-circle.fa.fa-twitter
+							a.redes-circle.fa.fa-facebook
+							a.redes-circle.fa.fa-linkedin
+					.col-md-4.margin-t-b
+						a Privacy Policy
+						a Terms of Use
